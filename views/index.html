@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>Hp Quiz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+</head>
+<body>
+	<h1>Which Harry Potter Character Are you?</h1>
+	<div class="container well form-inline" style="text-align:center">
+		<button type="button" id="startButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		 Start Quiz
+		</button>
+	</div>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Edit This Song</h4>
+			</div>
+			<div class="modal-body">
+				<div id="slide1">
+					<label>What's your name?</label>
+				<input class="form-control" type="text" id="userName" required />
+				</div>
+				<!-- SLIDE 2 QUESTION 1 -->
+				<div id="slide2">
+					<div class="radio">
+						<h4 class="question">1. Which pet would you rather have?</h4>
+						<label>
+	 					<input type="radio" name="optionsRadios" class="hermione">
+	 					a cat
+ 						</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="neville"  >
+					a toad or frog
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="harry"  >
+					an owl
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="ron"  >
+					a rat
+					</label>
+				</div>
+			</div>
+				<!--SLIDE 3 QUESTION 2 -->
+				<div id="slide3">
+					<div class="radio">
+						<h4 class="question">2. On a free afternoon, you'd rather:</h4>
+						<label>
+	 					<input type="radio" name="optionsRadios" class="harry">
+	 					play a game of your fav team sport
+ 						</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="hermione"  >
+					go to the library
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="ron"  >
+					play chess/your fav board game
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="neville"  >
+					garden
+					</label>
+				</div>
+			</div>
+
+				<!--SLIDE4 Question 3 -->
+				<div id="slide4">
+					<div class="radio">
+						<h4 class="question">3. Your greatest fear is:</h4>
+						<label>
+						<input type="radio" name="optionsRadios" class="ron">
+						a monster(the animal kind)
+						</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="neville"  >
+					a monster (the person kind)
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="harry"  >
+					fear itself
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="hermione"  >
+					failure
+					</label>
+				</div>
+				</div>
+
+				<!--SLIDE5 Question 4 -->
+				<div id="slide5">
+					<div class="radio">
+						<h4 class="question">4. Are you brave?</h4>
+						<label>
+						<input type="radio" name="optionsRadios" class="neville">
+						Not exactly. But I am always brave when it counts
+						</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="ron"  >
+					Somewhat.I'm super brave but I also have moments of great cowardice
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="hermione"  >
+					Yes. There's only one thing that scares me but it scares me greatly.
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="harry"  >
+					Hell yes. There will literally be statues built in my honor.
+					</label>
+				</div>
+			</div>
+
+				<!--SLIDE6 Question 5 -->
+				<div id="slide5">
+					<div class="radio">
+						<h4 class="question">5. What do you value the most?</h4>
+						<label>
+						<input type="radio" name="optionsRadios" class="hermione">
+						Social justice
+						</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="harry"  >
+					friendship
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="ron"  >
+					family
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input type="radio" name="optionsRadios" class="neville"  >
+					courage
+					</label>
+					<span id="submitQuizButton"></span>
+				</div>
+				</div>
+
+       <!--Slide7 Deciding Slide -->
+			 <div id="slide7">
+				 <span id="closeButton"></span>
+			 </div>
+				<!--End modal body -->
+			</div>
+			<div class="modal-footer">
+
+				<span id="prevButton"></span>
+				<span id="nextButton"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script src="/jquery/dist/jquery.min.js"></script>
+	<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/javascript/app.js"></script>
+</body>
+</html>
