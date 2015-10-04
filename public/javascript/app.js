@@ -1,19 +1,31 @@
-  $(document).ready(function () {
- //$("#slide1").hide();
-  //  $('#slide3').hide();
-    //$('#slide4').hide();
+var hermioneScore = 0;
+var ronScore = 0;
+var harryScore = 0;
+var nevilleScore = 0;
+var winner ="";
+jQuery(document).ready(function(){
 
+  $('input:radio[name="answer"]').change(
+    function(){
+        if ($(this).is(':checked') && $(this).val() == 'hermione') {
+          hermioneScore += 1;
+        }
+        else if ($(this).is(':checked') && $(this).val() == 'ron') {
+          ronScore += 1;
+        }
+      else  if ($(this).is(':checked') && $(this).val() == 'harry') {
+          harryScore += 1;
+        }
+        else  if ($(this).is(':checked') && $(this).val() == 'neville') {
+          nevilleScore += 1;
+        }
+});
 
-  $('#prevButton').html('<button  class="btn btn-info">Prev</button>');
-  $('#nextButton').html('<button  onclick="pressNextButton()" class="btn btn-primary">Next</button>');
-if($('#slide1').is(":visible")===false){
-  $('#prevButton').hide();
+});
+
+function showWinner(){
+console.log("Hermione Score " + hermioneScore);
+console.log("Ron Score " + ronScore);
+console.log("Harry Score " + harryScore);
+  console.log("Neville Score " + nevilleScore);
 }
-  });
-
-  function pressNextButton(){
-    if( $("div").attr('id') === 'slide1')){
-      $('#slide2').show();
-      $('#slide1').hide;
-    }
-  }

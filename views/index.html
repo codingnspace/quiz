@@ -2,7 +2,7 @@
 <html >
 <head>
 	<title>Hp Quiz</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta ="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/site.css">
@@ -20,31 +20,27 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Edit This Song</h4>
+				<h4 class="modal-title" id="myModalLabel">Which Harry Potter Character Are You?</h4>
 			</div>
 			<div class="modal-body">
-				<div id="slide1">
-					<label>What's your name?</label>
-				<input class="form-control" type="text" id="userName" required />
-				</div>
 				<!-- SLIDE 2 QUESTION 1 -->
 				<div id="slide2"  class="btn-group" data-toggle="buttons">
 					<h4 class="question">1. Which pet would you rather have?</h4>
 
 						<label class="btn btn-primary">
-	 					<input type="radio" name="optionsRadios" class="hermione" autocomplete="off">
+	 					<input type="radio" value="hermione" autocomplete="off" name="answer">
 	 					a cat
  						</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="neville" autocomplete="off" >
+					<input type="radio" value="neville" autocomplete="off" name="answer" >
 					a toad or frog
 					</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="harry" autocomplete="off"  >
+					<input type="radio" value="harry" autocomplete="off" name="answer" >
 					an owl
 					</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="ron" autocomplete="off" >
+					<input type="radio" value="ron" autocomplete="off" name="answer">
 					a rat
 					</label>
 			</div>
@@ -52,19 +48,19 @@
 				<div id="slide3"  class="btn-group" data-toggle="buttons">
 						<h4 class="question">2. On a free afternoon, you'd rather:</h4>
 						<label class="btn btn-primary" >
-	 					<input type="radio" name="optionsRadios" class="harry" autocomplete="off">
+	 					<input type="radio" value="harry" autocomplete="off" name="answer" >
 	 					Play sports
  						</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="hermione" autocomplete="off"  >
+					<input type="radio" value="hermione" autocomplete="off" name="answer" >
 					Read
 					</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="ron"  autocomplete="off">
+					<input type="radio" value="ron"  autocomplete="off" name="answer">
 					Play chess
 					</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="neville" autocomplete="off"  >
+					<input type="radio" value="neville" autocomplete="off" name="answer">
 					Garden
 					</label>
 			</div>
@@ -73,19 +69,19 @@
 				<div id="slide4" class="btn-group" data-toggle="buttons">
 						<h4 class="question">3. Your greatest fear is:</h4>
 						<label class="btn btn-primary">
-						<input type="radio" name="optionsRadios" class="ron" autocomplete="off" >
+						<input type="radio" value="ron" autocomplete="off" name="answer">
 						An animal
 						</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="neville" autocomplete="off"  >
+					<input type="radio" value="neville" autocomplete="off" name="answer">
 					A person
 					</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="harry" autocomplete="off"  >
+					<input type="radio" value="harry" autocomplete="off"  name="answer">
 					Fear itself
 					</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="hermione" autocomplete="off"   >
+					<input type="radio" value="hermione" autocomplete="off" name="answer"  >
 					Failure
 					</label>
 				</div>
@@ -94,51 +90,42 @@
 				<div id="slide5" class="btn-group" data-toggle="buttons">
 						<h4 class="question">4. Are you brave?</h4>
 						<label class="btn btn-primary">
-						<input type="radio" name="optionsRadios" class="neville" autocomplete="off">
+						<input type="radio" value="neville" autocomplete="off" name="answer">
 						Not exactly
 						</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="ron" autocomplete="off" >
+					<input type="radio" value="ron" autocomplete="off" name="answer" >
 					Somewhat
 					</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="hermione" autocomplete="off" >
+					<input type="radio" value="hermione" autocomplete="off" name="answer" >
 					Yes
 					</label>
 					<label class="btn btn-primary">
-					<input type="radio" name="optionsRadios" class="harry" autocomplete="off" >
+					<input type="radio" value="harry" autocomplete="off" name="answer">
 					Hell yes
 					</label>
 			</div>
 
 				<!--SLIDE6 Question 5 -->
-				<div id="slide5">
-					<div class="radio">
+				<div id="slide5" class="btn-group" data-toggle="buttons">
 						<h4 class="question">5. What do you value the most?</h4>
-						<label>
-						<input type="radio" name="optionsRadios" class="hermione">
+						<label class="btn btn-primary">
+						<input type="radio" value="hermione" autocomplete="off" name="answer">
 						Social justice
 						</label>
-				</div>
-				<div class="radio">
-					<label>
-					<input type="radio" name="optionsRadios" class="harry"  >
+					<label class="btn btn-primary">
+					<input type="radio" value="harry" autocomplete="off" name="answer">
 					friendship
 					</label>
-				</div>
-				<div class="radio">
-					<label>
-					<input type="radio" name="optionsRadios" class="ron"  >
+					<label class="btn btn-primary">
+					<input type="radio" value="ron"  autocomplete="off" name="answer">
 					family
 					</label>
-				</div>
-				<div class="radio">
-					<label>
-					<input type="radio" name="optionsRadios" class="neville"  >
+					<label class="btn btn-primary">
+					<input type="radio" value="neville" autocomplete="off" name="answer">
 					courage
 					</label>
-					<span id="submitQuizButton"></span>
-				</div>
 				</div>
 
        <!--Slide7 Deciding Slide -->
@@ -148,9 +135,7 @@
 				<!--End modal body -->
 			</div>
 			<div class="modal-footer">
-
-				<span id="prevButton"></span>
-				<span id="nextButton"></span>
+				<button  onclick="showWinner()" class="btn btn-primary">Submit</button>
 			</div>
 		</div>
 	</div>
