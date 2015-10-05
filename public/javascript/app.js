@@ -1,9 +1,10 @@
 var questions = ["Which pet is your ideal pet?", "On a free afternoon you'd rather be?", "What is your greatest fear?", "Are you brave?","What do you value the most?"];
-var options =[["A toad","Gardening","A Person","Not really","Courage"],
-              ["A Rat", "Playing Chess","An Animal","Somewhat","Family"],
-              ["A Cat","Reading","Failure","Yes","Social Justice"],
-              ["An Owl","Playing Sports", "Fear Itself", "Hell Yes","Friendship"]];
+var options =[["A toad", "Gardening", "A Person", "Not really", "Courage"] ,
+             ["A Rat", "Playing Chess", "An Animal", "Somewhat", "Family"] ,
+             ["A Cat", "Reading", "Failure" , "Yes" , "Social Justice"] ,
+             ["An Owl" ,"Playing Sports","Failure Itself", "Hell Yes", "Friendship"]];
 var answers= [];
+var selections= [];
 var questionNum = 0,
     nevilleCount = 0,
     ronCount = 0,
@@ -48,7 +49,7 @@ document.getElementById('quiz').innerHTML = elemString;
 displayQuestion();
 
 function getElemString(question, idx){
-return  '<div class="">'
+return  '<div>'
   + '<h3>'+question+'</h3>'
   + '<input type="radio" name="answer" value=' + options[0][idx] + ' />' + ' ' + options[0][idx] + '<br/>'
   + '<input type="radio" name="answer" value=' + options[1][idx] + ' />' + ' ' + options[1][idx] + '<br/>'
@@ -69,7 +70,7 @@ function prev(){
 }
 
 function addAnswer() {
-  answers[questionNum] += $('input[name="answer"]:checked').val();
+  answers.push($('input[name="answer"]:checked').val());
 }
 
 function submit(){
@@ -78,27 +79,21 @@ function submit(){
 }
 function calcScores(){
   for(var i=0; i< answers.length; i += 1 ){
-    for(var j=0; j< questions.length; j += 1){
-      if(answers[i] === options[i][j]){
-        switch (i) {
-          case 0:
-            nevilleCount++;
-            break;
-          case 1:
-            ronCount++;
-            break;
-          case 2:
-            hermCount++;
-            break;
-          case 3:
-            harryCount++;
-            break;
-          default:
-            console.log("Not possible");
-            break;
-        }
-      }
+    for(var k=0; k< questions.length; k += 1){
+      selections.push(options[i,k]);
     }
+      if(selections[i]=== answers[i] && i === 0){
+            nevilleCount++;
+          }
+    else  if(selections[i]=== answers[i] && i ===1){
+            ronCount++;
+          }
+    else  if(selections[i]=== answers[i] && i ===2){
+            hermCount++;
+          }
+    else  if(selections[i]=== answers[i] && i ===3){
+            harryCount++;
+         }
   }
   displayOutcome();
 }
@@ -108,5 +103,6 @@ function displayOutcome(){
   console.log(ronCount);
   console.log(hermCount);
   console.log(harryCount);
-  console.log(answers);
+  console.log("answers array contains " + answers);
+  console.log("selections array contains " + selections);
 }
